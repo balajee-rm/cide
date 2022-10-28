@@ -1,0 +1,16 @@
+https://www.split.io/blog/node-js-continuous-deployment-jenkins-heroku/
+
+git remote add origin2 git@github.com/balajee-rm/cide.git
+
+git remote set-url origin2 git://github.com/balajee-rm/cide.git
+
+git config --global url.https://github.com/.insteadOf git://github.com/
+
+git push origin1 master -f
+
+deployment
+----------
+npm ci
+npm run build --if-present
+npm test
+
